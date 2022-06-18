@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--transparent-white-paragraph);
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --very-light-gray-heading: hsl(0, 0%, 95%);
+  --transparent-white-paragraph: hsla(0, 0%, 100%, 0.75);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+}
+
+.three-card {
+  width: 900px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.first-card,
+.second-card,
+.third-card {
+  width: 300px;
+  padding: 40px;
+}
+
+.first-card {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: var(--bright-orange);
+}
+
+.second-card {
+  background-color: var(--dark-cyan);
+}
+
+.third-card {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--very-dark-cyan);
+}
+
+.heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--very-light-gray-heading);
+}
+
+.paragraph {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--transparent-white-paragraph);
+}
+
+.learn-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  height: 40px;
+  width: 140px;
+  border-radius: 50px;
+  background-color: var(--transparent-white-paragraph);
+  cursor: pointer;
+}
+
+.first-card > .learn-more {
+  color: var(--bright-orange);
+}
+
+.second-card > .learn-more {
+  color: var(--dark-cyan);
+}
+
+.third-card > .learn-more {
+  color: var(--very-dark-cyan);
+}
+
+@media only screen and (max-width: 899px) {
+  .three-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first-card {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+  }
+
+  .third-card {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+}
